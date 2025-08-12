@@ -1,7 +1,12 @@
 import React from "react";
+import Home from "Pages/Home";
 
 const App = () => {
-  return <h1 class="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <Home />
+    </>
+  );
 };
 
 export default App;
