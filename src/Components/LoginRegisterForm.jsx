@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const LoginRegisterForm = () => {
   return (
@@ -9,13 +10,17 @@ const LoginRegisterForm = () => {
             </h3>
 
             <div className="space-y-3 sm:space-y-4">
-              <button className="flex items-center justify-center w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base font-semibold text-gray-800 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors duration-200">
+              <Link className="flex items-center justify-center w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base font-semibold text-gray-800 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors duration-200" to="/login">
+              <button >
                 Login to your account
               </button>
+              </Link>
 
-              <button className="flex items-center justify-center w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base font-semibold text-white bg-[#553b1b] rounded-md hover:bg-[#6c4c23] transition-colors duration-200">
+              <Link className="flex items-center justify-center w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base font-semibold text-white bg-[#553b1b] rounded-md hover:bg-[#6c4c23] transition-colors duration-200" to="/signup">
+              <button >
                 Sign up with email
               </button>
+              </Link>
             </div>
 
             <p className="mt-4 text-[10px] xs:text-xs sm:text-sm text-gray-500 text-center leading-relaxed">
