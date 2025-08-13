@@ -7,3 +7,6 @@
 - eslint config for auto sort imports on file save
 - react-router
 - Absolute imports setup
+- Redux Toolkit
+
+![Home Page](image.png)
