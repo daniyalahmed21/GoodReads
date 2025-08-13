@@ -1,6 +1,6 @@
 # GoodReads Frontend
 
-## Dependencies 
+## Things used 
 - Tailwind css
 - react-icons
 - react-hot-toast
@@ -8,5 +8,6 @@
 - react-router
 - Absolute imports setup
 - Redux Toolkit
+- Authentication
 
 ![Home Page](image.png)

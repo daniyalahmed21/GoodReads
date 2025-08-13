@@ -9,13 +9,9 @@ const Header = () => {
   const navigate = useNavigate();
 
   const handleLogOut = () => {
-    console.log("hello");
-    localStorage.clear();
     dispatch(logOut());
     navigate("/signin");
   };
-
- 
 
   return (
     <header className="flex w-full items-center p-4 sm:p-5 max-w-7xl mx-auto">
