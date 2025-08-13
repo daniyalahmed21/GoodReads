@@ -10,7 +10,7 @@ const LoginRegisterForm = () => {
             </h3>
 
             <div className="space-y-3 sm:space-y-4">
-              <Link className="flex items-center justify-center w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base font-semibold text-gray-800 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors duration-200" to="/login">
+              <Link className="flex items-center justify-center w-full px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base font-semibold text-gray-800 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors duration-200" to="/signin">
               <button >
                 Login to your account
               </button>

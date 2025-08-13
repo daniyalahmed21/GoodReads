@@ -4,7 +4,7 @@ import Footer from "Components/Footer";
 import Header from "Components/Header";
 import LoginRegisterForm from "Components/LoginRegisterForm";
 
-const LandingPage = () => {
+const Home = () => {
   return (
     <div className="w-full font-sans bg-[#f4f1ea] min-h-screen">
       <Header />
@@ -43,4 +43,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Home;

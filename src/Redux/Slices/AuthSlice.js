@@ -26,27 +26,31 @@ export const signup = createAsyncThunk("auth/signup", async (data) => {
 export const signin = createAsyncThunk("auth/signin", async (data) => {
   try {
     const response = axiosInstance.post("signin", data);
-    console.log("hello");
     toast.promise(response, {
       loading: "Submitting form...",
       success: "Successfully Signed in!!",
-      error: "Something went wrong!!",
+      // error: "Something went wrong!!",
     });
     return await response;
   } catch (error) {
-    console.log(error);
-    toast.error("Cannot Signin, something went wrong");
+    if (error.response.data.err) {
+      toast.error(error.response.data.err);
+    } else {
+      toast.error("Cannot Signin, something went wrong");
+    }
   }
 });
 
 const authSlice = createSlice({
   name: "auth",
   initialState,
-  reducers: {},
+  reducers: {
+    logOut: (state) => {
+      (state.isLoggedIn = ""), (state.token = ""), (state.username = "");
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(signin.fulfilled, (state, action) => {
-      console.log("state", state);
-      console.log("action", action);
       if (action.payload.data) {
         state.isLoggedIn = action.payload.data.data !== undefined;
         state.token = action.payload.data.data.token;
@@ -62,6 +66,6 @@ const authSlice = createSlice({
   },
 });
 
-// export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { logOut } = authSlice.actions;
 
 export default authSlice.reducer;
