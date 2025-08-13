@@ -1,24 +1,23 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router';
+import { signup } from 'Redux/Slices/AuthSlice';
 
 const Signup = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', password: '', rePassword: '' });
+  const [formData, setFormData] = useState({ username: '', email: '', password: ''});
 
+  const dispatch = useDispatch()
+  const navigate =useNavigate()
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formData.password.length < 6) {
-      alert('Password must be at least 6 characters.');
-      return;
-    }
-    if (formData.password !== formData.rePassword) {
-      alert('Passwords do not match.');
-      return;
-    }
-    // Handle signup logic here
-    alert('Account created successfully!');
+    console.log(formData);
+    const response = await dispatch(signup(formData))
+    console.log(response)
+    // if (response.data.success) alert("Account created successfully!");
   };
 
   return (
@@ -31,8 +30,8 @@ const Signup = () => {
             <input
             autoComplete='off'
               type="text"
-              name="name"
-              value={formData.name}
+              name="username"
+              value={formData.username}
               onChange={handleChange}
               placeholder="First and last name"
               className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-2"
@@ -65,7 +64,7 @@ const Signup = () => {
             />
             <p className="text-xs text-gray-500 mt-1">Passwords must be at least 6 characters.</p>
           </div>
-          <div>
+          {/* <div>
             <label className="block text-sm font-medium text-gray-700">Re-enter password</label>
             <input
             autoComplete='off'
@@ -76,7 +75,7 @@ const Signup = () => {
               className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-2"
               required
             />
-          </div>
+          </div> */}
           <button
             type="submit"
             className="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition-colors duration-200"

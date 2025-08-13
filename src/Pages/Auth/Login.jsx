@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router";
+import axios, { Axios } from "axios";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router";
+import { signup } from "Redux/Slices/AuthSlice";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -7,14 +10,19 @@ const Login = () => {
     password: "",
   });
 
+  const dispatch = useDispatch()
+  const navigate =useNavigate()
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle signup logic here
-    alert("Account created successfully!");
+    console.log(formData);
+    const response = dispatch(signup(formData))
+    console.log(response)
+    if (response.data.success) alert("Account created successfully!");
   };
 
   return (
@@ -61,7 +69,7 @@ const Login = () => {
             type="submit"
             className="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition-colors duration-200"
           >
-            Create account
+            Login
           </button>
         </form>
         <p className="text-center text-sm text-gray-600 mt-4">
