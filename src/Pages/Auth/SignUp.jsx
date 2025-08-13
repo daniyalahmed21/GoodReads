@@ -1,34 +1,41 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router';
-import { signup } from 'Redux/Slices/AuthSlice';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
+import { signup } from "Redux/Slices/AuthSlice";
 
 const Signup = () => {
-  const [formData, setFormData] = useState({ username: '', email: '', password: ''});
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
 
-  const dispatch = useDispatch()
-  const navigate =useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-    const response = await dispatch(signup(formData))
-    console.log(response)
-    // if (response.data.success) alert("Account created successfully!");
+    const response = await dispatch(signup(formData));
+    if (response?.payload?.data?.success) navigate("/login");
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#f4f1ea] p-6">
       <div className="w-full max-w-md">
-        <h1 className="font-serif text-4xl font-bold text-center mb-6 text-[#00635d]">Create Account</h1>
-        <form onSubmit={handleSubmit} className="space-y-4" >
+        <h1 className="font-serif text-4xl font-bold text-center mb-6 text-[#00635d]">
+          Create Account
+        </h1>
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Your name</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Your name
+            </label>
             <input
-            autoComplete='off'
+              autoComplete="off"
               type="text"
               name="username"
               value={formData.username}
@@ -39,9 +46,11 @@ const handleSubmit = async (e) => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Email</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Email
+            </label>
             <input
-            autoComplete='off'
+              autoComplete="off"
               type="email"
               name="email"
               value={formData.email}
@@ -51,9 +60,11 @@ const handleSubmit = async (e) => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Password</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Password
+            </label>
             <input
-            autoComplete='off'
+              autoComplete="off"
               type="password"
               name="password"
               value={formData.password}
@@ -62,7 +73,9 @@ const handleSubmit = async (e) => {
               className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-2"
               required
             />
-            <p className="text-xs text-gray-500 mt-1">Passwords must be at least 6 characters.</p>
+            <p className="text-xs text-gray-500 mt-1">
+              Passwords must be at least 6 characters.
+            </p>
           </div>
           {/* <div>
             <label className="block text-sm font-medium text-gray-700">Re-enter password</label>
@@ -84,7 +97,8 @@ const handleSubmit = async (e) => {
           </button>
         </form>
         <p className="text-center text-sm text-gray-600 mt-4">
-          By creating an account, you agree to the Goodreads Terms of Service and Privacy Policy.
+          By creating an account, you agree to the Goodreads Terms of Service
+          and Privacy Policy.
         </p>
         <p className="text-center text-sm text-[#00635d] mt-2 hover:underline">
           Already have an account? <a href="/login">Sign In</a>

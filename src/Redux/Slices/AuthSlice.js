@@ -10,7 +10,7 @@ const initialState = {
 export const signup = createAsyncThunk("auth/signup", async (data) => {
   try {
     const response = axiosInstance.post("signup", data);
-    console.log("hello")
+    console.log("hello");
     toast.promise(response, {
       loading: "Submitting form...",
       success: "Successfully Signed up!!",
@@ -23,10 +23,43 @@ export const signup = createAsyncThunk("auth/signup", async (data) => {
   }
 });
 
+export const signin = createAsyncThunk("auth/signin", async (data) => {
+  try {
+    const response = axiosInstance.post("signin", data);
+    console.log("hello");
+    toast.promise(response, {
+      loading: "Submitting form...",
+      success: "Successfully Signed in!!",
+      error: "Something went wrong!!",
+    });
+    return await response;
+  } catch (error) {
+    console.log(error);
+    toast.error("Cannot Signin, something went wrong");
+  }
+});
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(signin.fulfilled, (state, action) => {
+      console.log("state", state);
+      console.log("action", action);
+      if (action.payload.data) {
+        state.isLoggedIn = action.payload.data.data !== undefined;
+        state.token = action.payload.data.data.token;
+        state.username = action.payload.data.data.username;
+        localStorage.setItem(
+          "isLoggedIn",
+          action.payload.data.data !== undefined
+        );
+        localStorage.setItem("token", action.payload.data.data.token);
+        localStorage.setItem("username", action.payload.data.data.username);
+      }
+    });
+  },
 });
 
 // export const { increment, decrement, incrementByAmount } = counterSlice.actions;
