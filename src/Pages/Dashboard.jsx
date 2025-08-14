@@ -14,7 +14,7 @@ const Dashboard = () => {
   const downloadBooks = async () => {
     if (bookState.bookList.length === 0) {
       const response = await dispatch(getAllBooks());
-      console.log(response);
+      return response;
     }
   };
 
@@ -30,7 +30,7 @@ const Dashboard = () => {
     <Layout>
       <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
         {bookState.bookList.map((book) => (
-          <BookCard key={book.id} author={book.author} title={book.title} />
+          <BookCard key={book._id} data={book}/>
         ))}
       </div>
     </Layout>
