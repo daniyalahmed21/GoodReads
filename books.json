@@ -1,0 +1,117 @@
+[
+    {
+      "title": "The Gilded Cage",
+      "description": "A thrilling historical fiction novel set in a mysterious, sprawling mansion.",
+      "author": "64063c7abf4bacf0fc6ede12",
+      "genres": [
+        "6409fe4709fc38c7d4f77d7a",
+        "640a0120da282a962a095b0c"
+      ],
+      "pages": 412,
+      "publishDate": "2018-09-25",
+      "imageUrl": "https://example.com/images/book1.jpg"
+    },
+    {
+      "title": "Echoes of the Void",
+      "description": "A sci-fi epic about a lone astronaut's journey to the edge of the universe.",
+      "author": "64063c7abf4bacf0fc6ede13",
+      "genres": [
+        "640a0120da282a962a095b0c",
+        "640b12345678901234567890"
+      ],
+      "pages": 680,
+      "publishDate": "2021-03-10",
+      "imageUrl": "https://example.com/images/book2.jpg"
+    },
+    {
+      "title": "Whispers of the Old City",
+      "description": "A dark fantasy novel filled with ancient magic and forgotten secrets.",
+      "author": "64063c7abf4bacf0fc6ede12",
+      "genres": [
+        "640a0120da282a962a095b0c",
+        "640c12345678901234567891"
+      ],
+      "pages": 350,
+      "publishDate": "2019-11-01",
+      "imageUrl": "https://example.com/images/book3.jpg"
+    },
+    {
+      "title": "The Quantum Paradox",
+      "description": "A mind-bending thriller exploring the implications of quantum mechanics.",
+      "author": "64063c7abf4bacf0fc6ede14",
+      "genres": [
+        "6409fe4709fc38c7d4f77d7a"
+      ],
+      "pages": 520,
+      "publishDate": "2022-07-15",
+      "imageUrl": "https://example.com/images/book4.jpg"
+    },
+    {
+      "title": "Beneath the Crimson Sun",
+      "description": "A tale of love and loss set on a distant, red-tinged planet.",
+      "author": "64063c7abf4bacf0fc6ede13",
+      "genres": [
+        "640b12345678901234567890"
+      ],
+      "pages": 300,
+      "publishDate": "2020-05-20",
+      "imageUrl": "https://example.com/images/book5.jpg"
+    },
+    {
+      "title": "The Midnight Thief",
+      "description": "A suspenseful mystery where a master thief must solve a murder to clear her name.",
+      "author": "64063c7abf4bacf0fc6ede15",
+      "genres": [
+        "6409fe4709fc38c7d4f77d7a",
+        "640d12345678901234567892"
+      ],
+      "pages": 450,
+      "publishDate": "2017-02-12",
+      "imageUrl": "https://example.com/images/book6.jpg"
+    },
+    {
+      "title": "Chronicles of the Fallen Kingdom",
+      "description": "An epic fantasy series opener about a young prince reclaiming his throne.",
+      "author": "64063c7abf4bacf0fc6ede16",
+      "genres": [
+        "640c12345678901234567891",
+        "640e12345678901234567893"
+      ],
+      "pages": 750,
+      "publishDate": "2023-01-01",
+      "imageUrl": "https://example.com/images/book7.jpg"
+    },
+    {
+      "title": "The Art of Digital Silence",
+      "description": "A non-fiction guide to disconnecting in the modern, always-on world.",
+      "author": "64063c7abf4bacf0fc6ede17",
+      "genres": [
+        "640f12345678901234567894"
+      ],
+      "pages": 280,
+      "publishDate": "2019-06-18",
+      "imageUrl": "https://example.com/images/book8.jpg"
+    },
+    {
+      "title": "A Recipe for Disaster",
+      "description": "A lighthearted romantic comedy set in the world of high-stakes cooking shows.",
+      "author": "64063c7abf4bacf0fc6ede18",
+      "genres": [
+        "6409fe4709fc38c7d4f77d7a"
+      ],
+      "pages": 290,
+      "publishDate": "2022-04-04",
+      "imageUrl": "https://example.com/images/book9.jpg"
+    },
+    {
+      "title": "The Serpent's Daughter",
+      "description": "An ancient myth reimagined with a powerful female protagonist.",
+      "author": "64063c7abf4bacf0fc6ede16",
+      "genres": [
+        "640c12345678901234567891"
+      ],
+      "pages": 480,
+      "publishDate": "2020-08-01",
+      "imageUrl": "https://example.com/images/book10.jpg"
+    }
+  ]

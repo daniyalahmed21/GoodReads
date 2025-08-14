@@ -1,6 +1,8 @@
 import React from "react";
 
-const BookCard = ({ title = "Unknown Book", author = "Unknown Author", imageUrl = "https://placehold.co/600x400", id }) => {
+import image from "Assets/600x400.svg"
+
+const BookCard = ({ title = "Unknown Book", author = "Unknown Author", imageUrl = image, id }) => {
   return (
     <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white hover:shadow-xl transition-shadow duration-300">
       <img
