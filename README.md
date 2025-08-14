@@ -10,13 +10,13 @@
 - Redux Toolkit
 - Authentication
 
-![Home Page](Assets/image.png)
+![Home Page](src/Assets/image.png)
 
-![Signin page](Assets/image-3.png)
+![Signin page](src/Assets/image-3.png)
 
-![SignUp Page](Assets/image-4.png)
+![SignUp Page](src/Assets/image-4.png)
 
-![Dashboard](Assets/image-1.png)
+![Dashboard](src/Assets/image-1.png)
 
-![Book Description](Assets/image-2.png)
+![Book Description](src/Assets/image-2.png)
 
