@@ -16,7 +16,7 @@
 
 ![SignUp Page](src/Assets/image-4.png)
 
-![Dashboard](src/Assets/image-1.png)
+![Dashboard](src/Assets/image-6.png)
 
 ![Book Description](src/Assets/image-2.png)
 
