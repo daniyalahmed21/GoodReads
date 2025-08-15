@@ -21,7 +21,7 @@ const BookCard = ({ data }) => {
         </p>
         {data._id && (
           <button
-            onClick={() => navigate("/books/description", { state: data })}
+            onClick={() => navigate("/book/description", { state: data })}
             className="mt-4 inline-block px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors duration-200"
           >
             View Details

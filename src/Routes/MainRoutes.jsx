@@ -1,23 +1,22 @@
-import React from "react";
-import SignIn from "Pages/Auth/SignIn";
-import Signup from "Pages/Auth/SignUp";
+import Signin from "Pages/Auth/Signin";
+import Signup from "Pages/Auth/Signup";
 import BookDescription from "Pages/BookDescription";
 import Dashboard from "Pages/Dashboard";
 import Home from "Pages/Home";
 import NotFound from "Pages/NotFound";
+import Shelf from "Pages/Shelf";
 import { Route, Routes } from "react-router";
 
-const MainRoutes = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/signin" element={<SignIn />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/books/description" element={<BookDescription />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  );
-};
-
-export default MainRoutes;
+export default function MainRoutes() {
+    return (
+        <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/signup" element={<Signup />}></Route>
+            <Route path="/signin" element={<Signin />}></Route>
+            <Route path="/dashboard" element={<Dashboard />}></Route>
+            <Route path="/shelf" element={<Shelf />}></Route>
+            <Route path="/book/description" element={<BookDescription />}></Route>
+            <Route path="*" element={<NotFound />} ></Route>
+        </Routes>
+    );
+}
