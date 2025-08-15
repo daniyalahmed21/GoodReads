@@ -20,4 +20,4 @@
 
 ![Book Description](src/Assets/image-2.png)
 
-![Book Shelves](image-5.png)
+![Book Shelves](src/Assets/image-5.png)
